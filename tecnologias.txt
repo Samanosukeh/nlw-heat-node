@@ -1,6 +1,0 @@
-Typescript
-Prisma para banco de dados relacional
-Banco de dados SQLite
-Express
-Github Oauth autenticação
-SocketIO
