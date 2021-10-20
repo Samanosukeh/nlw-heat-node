@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "sqlite"
+  url      =  "file:./dev.db"
+}           // env("DATABASE_URL")
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+//tabela usuário
+model User {
+  id         String @id @default(uuid())
+  name       String
+  github_id  Int
+  avatar_url String
+  login      String
+
+  //nome que quero pra essa tabela
+  @@map("users")
+  messages Message[]
+}
+
+model Message { // N usuarios pra 1 messagem //
+  id         String @id @default(uuid())
+  text       String
+  create_at  DateTime @default(now())
+
+  user User @relation(fields: [user_id], references: [id])
+  
+  user_id   String
+
+  @@map("messages")
+}

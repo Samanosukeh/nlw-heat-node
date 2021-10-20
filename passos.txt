@@ -1,0 +1,48 @@
+trilha node:
+-- criar o projeto
+npm init -y
+-- instalando as dependencias:
+npm install express 
+npm install -D @types/express
+
+// ts-node-dev: recarrega o servidor sem parar
+npm install -D ts-node-dev
+npm install -D typescript
+
+criar pasta src/app.ts
+
+criar as configuracoes do typescript
+npx tsc --init
+
+instalando o prisma:
+npm install prisma --save-dev
+iniciando o prisma no projeto
+npx prisma init
+
+configurar o github Oauth no site do github
+
+para usar a env precisa instalar:
+npm install dotenv
+
+// colocar as regras de negocio dentro de services
+
+instalar o axios
+npm install axios
+npm install @types/axios --save-dev
+
+instalar jsonwebtoken
+npm install @types/jsonwebtoken --save-dev
+
+criando tabela usuários no Prisma e dando migrate
+npx prisma migrate dev
+
+para ver o banco de dados no prisma web
+npx prisma studio
+
+configurar o websocket
+npm install socket.io
+npm install @types/socket.io --save-dev
+
+Permitir ou barrar requisições
+npm install cors
+npm install @types/cors --save-dev
